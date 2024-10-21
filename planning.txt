@@ -1,0 +1,44 @@
+create voting application
+
+
+
+1.model?
+2.routes?
+
+voting  the functionality:-
+
+1. user signIn/ signUp
+2. see the list of condidate
+3.vote one of the candidate, after voting, user can't vote again
+4.there is a route which show the list of candidates and their live vote counts sorted by there vote count
+5.user data must contain their one unique goverment id proof name: addhar card number
+6.there should be one admin who can only maintain the table of  candidates and he can't able to vote at all
+7.user can change their password
+8.user can login only with addhar card nunber and password 
+9.admin can't vote at all
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Routes
+
+User Authentication:
+  /signUp: Post - Create a new user account.
+  /login: Post - log in to an existion account. (aaddhar card number + password)
+
+Voting:
+  /candidates: Get - get the list of candidates.
+  /vote/:candidates: Post - Vote for a specfic candidate.
+
+Vote counts:
+   /vote/counts: Get- get the list of candidates sorted by their vote counts.
+
+User Profile: 
+   /profile: Get- get the user's profile information.
+   /profile/password: Put- change the user's password.
+
+Admin Candidate Management:
+ /candidates: Post- Create a new candidate.
+ /candidates/:candidateId: Put- Update an existing candidate.
+ /candidates/:candidateId: Delete- Delete a candidate from the list.     
+
+ Laydiagram URL:- https://drive.google.com/file/d/1uwGLdRLME1FJQ7yHEI3U98tKbVfOWMfV/view?usp=sharing
